@@ -1,0 +1,12 @@
+<form>
+    <label>Username : </label>
+    <input type="text" name="username" [(ngModel)]="username"><br>
+    <label>Password : </label>
+    <input type="password" name="password" [(ngModel)]="password"><br>
+    <button (click)=handleLogin()>Login</button>
+</form>
+
+<div>
+    <!-- <p>Is user not valid : {{ isInvalidUser }}</p> -->
+    <p *ngIf='isInvalidUser'>{{ errorMessage }}</p>
+</div>
